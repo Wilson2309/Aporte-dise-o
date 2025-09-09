@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorldTech</title>
+    <!-- Incluye Tailwind CSS para un diseño moderno y responsivo -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <header class="bg-white shadow-md rounded-b-lg sticky top-0 z-50">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex items-center justify-between flex-wrap">
+                <a href="#home" class="text-2xl font-bold text-gray-900" onclick="showPage('home')">WorldTech</a>
+                <div class="space-x-4 flex-grow text-center hidden md:flex">
+                    <a href="#home" class="text-gray-600 hover:text-gray-900 font-medium px-3 py-2 rounded-md" onclick="showPage('home')">Inicio</a>
+                    <a href="#products" class="text-gray-600 hover:text-gray-900 font-medium px-3 py-2 rounded-md" onclick="showPage('products')">Productos</a>
+                    <a href="#about" class="text-gray-600 hover:text-gray-900 font-medium px-3 py-2 rounded-md" onclick="showPage('about')">Acerca de Nosotros</a>
+                    <a href="#contact" class="text-gray-600 hover:text-gray-900 font-medium px-3 py-2 rounded-md" onclick="showPage('contact')">Contacto</a>
+                </div>
+                <div>
+                    <a href="#cart" class="text-gray-600 hover:text-gray-900 font-medium px-3 py-2 rounded-md flex items-center" onclick="showPage('cart')">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.153 1.703.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                        <span id="cart-count" class="ml-1 text-sm font-semibold">0</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Contenido de la Página de Inicio -->
+        <section id="home" class="page active">
+            <h1 class="text-4xl font-extrabold text-center text-gray-900 mb-8">Bienvenido a nuestra Tienda en Línea</h1>
+            <article class="bg-white p-6 rounded-xl shadow-lg mb-8">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">¡Oferta del Día!</h2>
+                <div class="md:flex items-center space-y-4 md:space-y-0 md:space-x-8">
+                    <img src="https://store.ee.co.uk/images/product/uni2/DigitalContent/hh/HHCW_310DBE5B-6DF5-4809-B8F8-62F7024FAF62_large.jpg" alt="Producto Destacado" class="w-full md:w-1/2 rounded-lg shadow-inner">
+                    <div class="flex-1">
+                        <p class="text-gray-600 mb-4">Descubre nuestro producto más popular con un descuento increíble. ¡Calidad garantizada!</p>
+                        <a href="#products" class="inline-block bg-indigo-600 text-white font-bold py-2 px-6 rounded-full hover:bg-indigo-700 transition duration-300" onclick="showPage('products')">Ver productos</a>
+                    </div>
+                </div>
+            </article>
+            <section class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <article class="bg-white p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Envío Rápido</h3>
+                    <p class="text-gray-600">Entregamos tus productos en tiempo récord directamente a tu puerta.</p>
+                </article>
+                <article class="bg-white p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Soporte 24/7</h3>
+                    <p class="text-gray-600">Nuestro equipo de soporte está disponible las 24 horas para ayudarte.</p>
+                </article>
+                <article class="bg-white p-6 rounded-xl shadow-lg">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Productos de Calidad</h3>
+                    <p class="text-gray-600">Seleccionamos cuidadosamente cada artículo para asegurar la mejor calidad.</p>
+                </article>
+            </section>
+        </section>
+
+        <!-- Contenido de la Página de Productos -->
+        <section id="products" class="page">
+            <h1 class="text-4xl font-extrabold text-center text-gray-900 mb-8">Nuestros Productos</h1>
+            <section class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <!-- Tarjeta de Producto 1 -->
+                <article class="bg-white p-6 rounded-xl shadow-lg card">
+                    <img src="https://www.donnyb.ca/files/image/attachment/4079/preview_iphone_11_256GB_Purple.jpg" alt="Producto 1" class="w-full h-48 object-cover rounded-md mb-4" id="prod-img-1">
+                    <h2 class="text-xl font-bold text-gray-900 mb-2">Iphone 11</h2>
+                    <p class="text-gray-600 mb-4">Un poderoso celular de la marca Apple</p>
+                    <span class="text-2xl font-semibold text-gray-900">$195.00</span>
+                    <button class="w-full mt-4 bg-indigo-600 text-white font-bold py-2 px-4 rounded-full btn-primary" data-id="1">Añadir al Carrito</button>
+                    <!-- Ejemplo de manipulación del DOM -->
+                    <p class="text-center mt-2 text-sm text-gray-500">Haz clic en la imagen para cambiarla.</p>
+                </article>
+                <!-- Tarjeta de Producto 2 -->
+                <article class="bg-white p-6 rounded-xl shadow-lg card">
+                    <img src="https://store.ee.co.uk/images/product/uni2/DigitalContent/hh/HHCW_310DBE5B-6DF5-4809-B8F8-62F7024FAF62_large.jpg" alt="Producto 2" class="w-full h-48 object-cover rounded-md mb-4">
+                    <h2 class="text-xl font-bold text-gray-900 mb-2">PlayStation 5</h2>
+                    <p class="text-gray-600 mb-4">La mejor consola de videojuegos de la actualidad.</p>
+                    <span class="text-2xl font-semibold text-gray-900">$565.00</span>
+                    <button class="w-full mt-4 bg-indigo-600 text-white font-bold py-2 px-4 rounded-full btn-primary" data-id="2">Añadir al Carrito</button>
+                </article>
+                <!-- Tarjeta de Producto 3 -->
+                <article class="bg-white p-6 rounded-xl shadow-lg card">
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/71kw4xDLrPL._SS400_.jpg" alt="Producto 3" class="w-full h-48 object-cover rounded-md mb-4">
+                    <h2 class="text-xl font-bold text-gray-900 mb-2">Apple Watch Series 5</h2>
+                    <p class="text-gray-600 mb-4">Un producto innovador de la marca Apple.</p>
+                    <span class="text-2xl font-semibold text-gray-900">$85.99</span>
+                    <button class="w-full mt-4 bg-indigo-600 text-white font-bold py-2 px-4 rounded-full btn-primary" data-id="3">Añadir al Carrito</button>
+                </article>
+                <!-- Tarjeta de Producto 4 -->
+                <article class="bg-white p-6 rounded-xl shadow-lg card">
+                    <img src="https://bitlogic.ec/wp-content/uploads/2025/05/Macbook-Air-15_-400x400.png" alt="Producto 4" class="w-full h-48 object-cover rounded-md mb-4">
+                    <h2 class="text-xl font-bold text-gray-900 mb-2">MacBook Air 13</h2>
+                    <p class="text-gray-600 mb-4">Un producto perfecto para los universitarios y personas que necesiten potencia.</p>
+                    <span class="text-2xl font-semibold text-gray-900">$2,279.99</span>
+                    <button class="w-full mt-4 bg-indigo-600 text-white font-bold py-2 px-4 rounded-full btn-primary" data-id="4">Añadir al Carrito</button>
+                </article>
+            </section>
+        </section>
+
+        <!-- Contenido de la Página Acerca de Nosotros -->
+        <section id="about" class="page">
+            <h1 class="text-4xl font-extrabold text-center text-gray-900 mb-8">Acerca de Nosotros</h1>
+            <article class="bg-white p-8 rounded-xl shadow-lg text-lg leading-relaxed">
+                <p class="mb-4">
+                    Somos una empresa dedicada a ofrecer productos de alta calidad a nuestros clientes. Nuestra misión es simple: proporcionar una experiencia de compra en línea excepcional, con productos únicos, un servicio al cliente inigualable y un proceso de envío rápido y eficiente.
+                </p>
+                <p class="mb-4">
+                    Fundada en [2024], comenzamos como una pequeña tienda local con la visión de llevar nuestros productos a un público más amplio. Con el tiempo, hemos crecido y evolucionado, pero nuestro compromiso con la calidad y la satisfacción del cliente sigue siendo la base de todo lo que hacemos.
+                </p>
+                <p>
+                    Creemos en la transparencia y la honestidad. Por eso, nos esforzamos por construir relaciones duraderas con nuestros clientes basadas en la confianza y el respeto. Gracias por elegirnos y por ser parte de nuestra historia.
+                </p>
+            </article>
+        </section>
+
+        <!-- Contenido de la Página de Carrito de Compra -->
+        <section id="cart" class="page">
+            <h1 class="text-4xl font-extrabold text-center text-gray-900 mb-8">Tu Carrito</h1>
+            <div id="cart-container" class="bg-white p-6 rounded-xl shadow-lg">
+                <p id="empty-cart-message" class="text-center text-gray-500 mb-4">Tu carrito está vacío.</p>
+                <!-- Los artículos del carrito se añadirán aquí con JavaScript -->
+            </div>
+            <div id="cart-summary" class="bg-white p-6 rounded-xl shadow-lg mt-8 hidden">
+                <div class="flex justify-between items-center mb-4">
+                    <span class="text-xl font-semibold">Total:</span>
+                    <span class="text-2xl font-bold text-gray-900" id="cart-total">$0.00</span>
+                </div>
+                <button class="w-full bg-indigo-600 text-white font-bold py-3 px-6 rounded-full btn-primary">Proceder al Pago</button>
+            </div>
+        </section>
+
+        <!-- Contenido de la Página de Contacto -->
+        <section id="contact" class="page">
+            <h1 class="text-4xl font-extrabold text-center text-gray-900 mb-8">Contáctanos</h1>
+            <div class="bg-white p-8 rounded-xl shadow-lg max-w-lg mx-auto">
+                <p class="text-gray-600 mb-6">¿Tienes alguna pregunta? Envíanos un mensaje y te responderemos lo antes posible.</p>
+                <form id="contact-form">
+                    <div class="mb-4">
+                        <label for="name" class="block text-gray-700 font-semibold mb-2">Nombre Completo</label>
+                        <input type="text" id="name" name="name" class="w-full p-3 rounded-md border-gray-300 focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" placeholder="Tu nombre" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-gray-700 font-semibold mb-2">Correo Electrónico</label>
+                        <input type="email" id="email" name="email" class="w-full p-3 rounded-md border-gray-300 focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" placeholder="tu_correo@ejemplo.com" required>
+                    </div>
+                    <div class="mb-6">
+                        <label for="message" class="block text-gray-700 font-semibold mb-2">Mensaje</label>
+                        <textarea id="message" name="message" rows="4" class="w-full p-3 rounded-md border-gray-300 focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" placeholder="Tu mensaje..." required></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-indigo-600 text-white font-bold py-3 px-6 rounded-full btn-primary">Enviar Mensaje</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white text-center py-6 rounded-t-lg">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <p>&copy; 2025 WorldTech. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
